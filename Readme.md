@@ -3,7 +3,6 @@
 <b>Feature:</b>
 <ul>
 <li>Random hadith on each Refresh</li>
-<p>
-<strong>[API](https://random-hadith-server.vercel.app/random-hadith)</strong> 
-</p>
 </ul>
+
+[API](https://random-hadith-server.vercel.app/random-hadith)
