@@ -4,6 +4,6 @@
 <ul>
 <li>Random hadith on each Refresh</li>
 <p>
-<strong>Link:</strong> <a>https://random-hadith-server.vercel.app/random-hadith</a>
+<strong>[API](https://random-hadith-server.vercel.app/random-hadith)</strong> 
 </p>
 </ul>
