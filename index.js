@@ -9,30 +9,13 @@ const Hadith = require("./models/hadith");
 app.use(express.json());
 app.use(cors()); // Use the cors middleware
 
-let currentRandomHadith = {}; // Store the current random Hadith
-
-// Function to fetch a random Hadith
-const fetchRandomHadith = async () => {
+app.get('/random-hadith', async (req, res) => {
   try {
     const randomHadith = await Hadith.aggregate([{ $sample: { size: 1 } }]);
-    currentRandomHadith = randomHadith[0];
+    res.json(randomHadith[0]);
   } catch (error) {
     console.error(error);
-  }
-};
-
-// Fetch a random Hadith on server startup
-fetchRandomHadith();
-
-// Refresh the random Hadith every minute
-setInterval(fetchRandomHadith, 60 * 1000); // 60 seconds * 1000 milliseconds
-
-app.get("/random-hadith", async (req, res) => {
-  try {
-    res.json(currentRandomHadith);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 app.get("/", (req, res) => {
