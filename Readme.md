@@ -27,7 +27,7 @@
 
 # API Structure:
 <code>
-/hadith/search/:reference/:348
+/search/:reference/:348
 </code>
 <code>/:category</code> refers fildname for search
 <code>/:searchString</code> refers what to search in field
