@@ -20,7 +20,7 @@ app.get('/random-hadith', async (req, res) => {
 });
 
 // Define the API route for searching by various fields
-app.get('/hadith/search/:field/:query', async (req, res) => {
+app.get('/search/:field/:query', async (req, res) => {
   try {
     const searchField = req.params.field.toLowerCase();
     const searchQuery = req.params.query.toLowerCase();
