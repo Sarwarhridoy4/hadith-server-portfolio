@@ -18,6 +18,39 @@ app.get('/random-hadith', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
+// Define the API route for searching by various fields
+app.get('/hadith/search/:field/:query', async (req, res) => {
+  try {
+    const searchField = req.params.field.toLowerCase();
+    const searchQuery = req.params.query.toLowerCase();
+    
+    // Map the search field to the corresponding field in the database
+    const fieldMapping = {
+      hadith: 'hadith',
+      narrator: 'narrator',
+      source: 'source',
+      reference: 'reference',
+    };
+    
+    const fieldToSearch = fieldMapping[searchField];
+    
+    if (!fieldToSearch) {
+      return res.status(400).json({ error: 'Invalid search field' });
+    }
+
+    const matchingHadith = await Hadith.find({
+      [fieldToSearch]: { $regex: searchQuery, $options: 'i' }, // Case-insensitive regex search on the selected field
+    });
+    
+    res.json(matchingHadith);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 app.get("/", (req, res) => {
   res.send(`Welcome to my random hadith server`);
 });
