@@ -3,6 +3,22 @@
 <b>Feature:</b>
 <ul>
 <li>Random hadith on each Refresh</li>
+<li>Search using fiedname:
+<ul>
+  <li>
+    hadith
+  </li>
+  <li>
+    narrator
+  </li>
+  <li>
+    source
+  </li>
+  <li>
+    reference
+  </li>
+</ul>
+</li>
 </ul>
 
 
