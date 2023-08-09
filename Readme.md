@@ -26,9 +26,7 @@
 </ul>
 
 # API Structure:
-<code>
-/search/:reference/:348
-</code>
+<code>/search/:reference/:348</code>
 <code>/:category</code> refers fildname for search like:
 
 <ul>
