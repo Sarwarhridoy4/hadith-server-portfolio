@@ -30,10 +30,10 @@
 <code>/:category</code> refers fildname for search like:
 
 <ul>
-<li>/hadith/whatever-you-search</li>
-<li>/narrator/whatever-you-search</li>
-<li>/source/whatever-you-search</li>
-<li>/reference/whatever-you-search</li>
+<li>/search/hadith/whatever-you-search</li>
+<li>/search/narrator/whatever-you-search</li>
+<li>/search/source/whatever-you-search</li>
+<li>/search/reference/whatever-you-search</li>
 </ul>
 
 <code>/:searchString</code> refers what to search in field
