@@ -45,6 +45,7 @@
 To get all hadith:
 <br/>
 <code>/all-hadith</code>
+<br/>
 To get a random hadith:
 <br/>
 <code>/random-hadith</code>
