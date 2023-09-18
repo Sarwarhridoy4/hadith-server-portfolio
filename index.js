@@ -9,6 +9,17 @@ const Hadith = require("./models/hadith");
 app.use(express.json());
 app.use(cors()); // Use the cors middleware
 
+app.get('/all-hadith', async (req, res) => {
+  try {
+    const randomHadith = await Hadith.find({});
+    res.json(randomHadith);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 app.get('/random-hadith', async (req, res) => {
   try {
     const randomHadith = await Hadith.aggregate([{ $sample: { size: 1 } }]);
@@ -18,6 +29,7 @@ app.get('/random-hadith', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 // Define the API route for searching by various fields
 app.get('/search/:field/:query', async (req, res) => {
