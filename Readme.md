@@ -43,8 +43,10 @@
 
 # API Structure:
 To get all hadith:
+<br/>
 <code>/all-hadith</code>
 To get a random hadith:
+<br/>
 <code>/random-hadith</code>
 <code>/search/:reference/:348</code>
 <code>/:category</code> refers fildname for search like:
