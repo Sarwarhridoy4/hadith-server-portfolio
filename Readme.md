@@ -30,7 +30,7 @@
 <li>Vercel</li>
 </ul>
 
-[API](https://random-hadith-server-i1yfit3my-sarwarhridoy4.vercel.app/random-hadith)
+[API](https://random-hadith-server.vercel.app/random-hadith)
 
 # Search Hadith by:
 
@@ -45,10 +45,13 @@
 To get all hadith:
 <br/>
 <code>/all-hadith</code>
+<br/>
 To get a random hadith:
 <br/>
 <code>/random-hadith</code>
+<br/>
 <code>/search/:reference/:348</code>
+<br/>
 <code>/:category</code> refers fildname for search like:
 
 <ul>
