@@ -1,10 +1,9 @@
 const express = require("express");
 const cors = require("cors"); // Import the cors package
 const app = express();
-const db = require("./Database/db");
 require("dotenv").config(); // Load environment variables from .env file
 
-const Hadith = require("./models/hadith");
+const Hadith = require("./src/models/hadith");
 
 app.use(express.json());
 app.use(cors()); // Use the cors middleware
